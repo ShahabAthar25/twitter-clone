@@ -6,7 +6,7 @@ function Feed() {
     return (
         <div className="feed">
             <div className="feed__header">
-                <h1>Home</h1>
+                <h2>Home</h2>
             </div>
         </div>
     )
