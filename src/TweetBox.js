@@ -49,7 +49,8 @@ function TweetBox() {
                 <Button
                     onClick={sendTweet}
                     type="submit"
-                    className="tweetBox__tweetButton">
+                    className="tweetBox__tweetButton"
+                >
                     Tweet
                 </Button>
             </form>
