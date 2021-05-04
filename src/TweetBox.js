@@ -14,17 +14,22 @@ function TweetBox() {
     const sendTweet = (e) => {
         e.preventDefault()
 
-        db.collection('posts').add({
-            displayName: 'Shahab Athar',
-            username: 'ShahabAthar25',
-            verified: true,
-            text: tweetMessage,
-            image: tweetImage,
-            avatar: 'https://lh3.googleusercontent.com/ogw/ADGmqu8gWv5m1Uv-Pwxp5828GVr0lT9t9prxm4gNaAc_=s32-c-mo'
-        })
+        if (tweetMessage !== "") {
+            db.collection('posts').add({
+                displayName: 'Shahab Athar',
+                username: 'ShahabAthar25',
+                verified: true,
+                text: tweetMessage,
+                image: tweetImage,
+                avatar: 'https://lh3.googleusercontent.com/ogw/ADGmqu8gWv5m1Uv-Pwxp5828GVr0lT9t9prxm4gNaAc_=s32-c-mo'
+            })
+            setTweetMessage("")
+            setTweetImage("")
+        } else {
+            alert('Please Enter Text')
+        }
 
-        setTweetMessage("")
-        setTweetImage("")
+
     }
 
     return (
